@@ -41,10 +41,10 @@ If either of the above are missing, the module will count down to the New Millen
 ## Version History
 
 V1.0 - Adjust name, Fix counters to show 0# under 10s for all but days, remove unneeded fluff, not allow to go past time. adjust for my uses. Publish
+v1.01 - CSS now works through MMM-CountDown2.css - please use custom.css to override as you like.
 
 ## Planned work
 
-* setup CSS to function correctly. 
-* setup more varibles. 
+* setup more options. 
 * Make labels more intuitive/optional. 
 * Make sections "optional" under condition.. EG: if time left is over 1 day, don't show seconds.

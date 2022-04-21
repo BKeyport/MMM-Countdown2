@@ -1,3 +1,11 @@
+/* Magic Mirror Module: MMM-Countdown2
+ *
+ * v1.01 - April 2022
+ * By Brendan Keyport <brendan.keyport@gmail.com>
+ * Original work by Boaz <https://github.com/boazarad>
+ *
+ */
+
 Module.register("MMM-CountDown2",{
 	// Default module config.
 	defaults: {
@@ -12,6 +20,13 @@ Module.register("MMM-CountDown2",{
 		minutesLabel: 'm',
 		secondsLabel: 's',
 	},
+
+	// CSS Add
+	getStyles: function() {
+		return [this.data.path + "/MMM-CountDown2.css"];
+	},
+
+
 
 	// set update interval
 	start: function() {
@@ -28,9 +43,7 @@ Module.register("MMM-CountDown2",{
 		var timeWrapper = document.createElement("div");
 		var textWrapper = document.createElement("div");
 
-		textWrapper.className = "align-center week dimmed medium";
-		timeWrapper.className = "time bright medium";
-		textWrapper.innerHTML=this.config.event;
+		textWrapper.innerHTML="<div class='textWrapper'>" + this.config.event + "</div>";
 
 		var today = new Date(Date.now());
 		var target = new Date(this.config.date);
@@ -55,7 +68,7 @@ Module.register("MMM-CountDown2",{
 		if(this.config.showMinutes == true) mins = diffMinutes + this.config.minutesLabel;
 		if(this.config.showSeconds == true) secs = diffSeconds + this.config.secondsLabel;
 
-		timeWrapper.innerHTML = days + hrs + mins + secs;
+		timeWrapper.innerHTML = "<div class='timeWrapper'>" + days + hrs + mins + secs + "</div>";
 
 		wrapper.appendChild(textWrapper);
 		wrapper.appendChild(timeWrapper);
