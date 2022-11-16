@@ -8,23 +8,20 @@ This module is an updated version of [MMM-Countdown](https://github.com/boazarad
 To use this module, add the following configuration block to the modules array in the `config/config.js` file:
 
 ```js
-var config = {
-    modules: [
         {
             module: 'MMM-CountDown2',
+            position: "<pick a spot>",
             config: {
                 // See configuration options
             }
-        }
-    ]
-}
-```
+        },
+        
+```     
 
 ## Configuration options
 
 | Option           | Description                                                                                                           |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `position`       | *Required* Where do you want to place the counter (use standard magicmirror positions)                                |
 | `event`          | *Required* Name of event to count down to (displayed above counter)                                                   |
 | `date`           | *Required* Date to count down to (YYYY-MM-DD HH:MM:SS)                                                                |
 | `showHours`      | Decide whether or not to display the hours. Default is true                                                           |
